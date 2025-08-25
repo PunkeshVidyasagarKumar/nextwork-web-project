@@ -1,0 +1,33 @@
+<settings>
+    <servers>
+        <server>
+          <id>nextwork-punkesh-devops-cicd</id>
+          <username>aws</username>
+          <password>${env.CODEARTIFACT_AUTH_TOKEN}</password>
+        </server>
+    </servers>
+
+    <profiles>
+        <profile>
+            <id>nextwork-punkesh-devops-cicd</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <repositories>
+                <repository>
+                    <id>nextwork-punkesh-devops-cicd</id>
+                    <url>https://nextwork-439378700749.d.codeartifact.ap-south-1.amazonaws.com/maven/punkesh-devops-cicd/</url>
+                </repository>
+            </repositories>
+        </profile>
+    </profiles>
+
+    <mirrors>
+        <mirror>
+            <id>nextwork-punkesh-devops-cicd</id>
+            <name>nextwork-punkesh-devops-cicd</name>
+            <url>https://nextwork-439378700749.d.codeartifact.ap-south-1.amazonaws.com/maven/punkesh-devops-cicd/</url>
+            <mirrorOf>*</mirrorOf>
+        </mirror>
+    </mirrors>
+</settings>
